@@ -1,6 +1,10 @@
 [build]
   command = "chmod +x ./build-netlify.sh && ./build-netlify.sh"
   publish = "dist"
+  environment = { NODE_VERSION = "18.17.1" }
+
+[[plugins]]
+  package = "./netlify-plugin-fix-deps.js"
 
 # Handle SPA routing
 [[redirects]]
