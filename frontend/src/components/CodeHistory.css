@@ -1,0 +1,108 @@
+.code-history {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 10;
+}
+
+.history-toggle {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.history-toggle:hover {
+  background-color: #444;
+}
+
+.history-panel {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 0.5rem;
+  background-color: #222;
+  border-radius: 0.5rem;
+  width: 300px;
+  max-height: 400px;
+  overflow-y: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  z-index: 100;
+}
+
+@media (max-width: 768px) {
+  .history-panel {
+    width: 250px;
+    max-height: 300px;
+  }
+
+  .code-history {
+    top: 0.5rem;
+    left: 0.5rem;
+  }
+}
+
+.history-panel h3 {
+  margin-top: 0;
+  color: #ddd;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.history-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.history-item {
+  border-bottom: 1px solid #444;
+  padding: 0.75rem 0;
+}
+
+.history-item:last-child {
+  border-bottom: none;
+}
+
+.history-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.history-timestamp {
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+.history-load-btn {
+  background-color: #2a5298;
+  color: white;
+  border: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.history-load-btn:hover {
+  background-color: #3a6db8;
+}
+
+.history-preview {
+  font-family: monospace;
+  font-size: 0.8rem;
+  color: #ccc;
+  background-color: #333;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  white-space: pre-wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 100px;
+}

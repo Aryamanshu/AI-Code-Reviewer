@@ -1,0 +1,27 @@
+{
+  "name": "code-review-app",
+  "version": "1.0.0",
+  "description": "AI-powered code review application",
+  "main": "index.js",
+  "scripts": {
+    "start": "node BackEnd/server.js",
+    "build": "cd frontend && npm run build",
+    "install-all": "npm install && cd BackEnd && npm install && cd ../frontend && npm install",
+    "dev": "concurrently \"cd BackEnd && npm run dev\" \"cd frontend && npm run dev\"",
+    "heroku-postbuild": "cd frontend && npm install && npm run build"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "keywords": [
+    "code-review",
+    "ai",
+    "react",
+    "express"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

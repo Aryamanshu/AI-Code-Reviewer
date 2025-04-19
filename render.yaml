@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: code-review-backend
+    env: node
+    buildCommand: cd BackEnd && npm install
+    startCommand: cd BackEnd && node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: GOOGLE_GEMINI_KEY
+        sync: false
+      - key: CORS_ORIGIN
+        value: https://your-netlify-app.netlify.app # You'll update this with your actual Netlify URL
+    plan: free
