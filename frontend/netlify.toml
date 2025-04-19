@@ -1,5 +1,5 @@
 [build]
-  command = "npm run build"
+  command = "chmod +x ./build-netlify.sh && ./build-netlify.sh"
   publish = "dist"
 
 # Handle SPA routing
