@@ -4,7 +4,7 @@
   "description": "AI-powered code review application",
   "main": "index.js",
   "scripts": {
-    "start": "node BackEnd/server.js",
+    "start": "node start.js",
     "build": "cd frontend && npm run build",
     "install-all": "npm install && cd BackEnd && npm install && cd ../frontend && npm install",
     "dev": "concurrently \"cd BackEnd && npm run dev\" \"cd frontend && npm run dev\"",
